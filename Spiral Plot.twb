@@ -1,0 +1,1946 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20241.24.0308.0326                               -->
+<workbook original-version='18.1' source-build='2024.1.1 (20241.24.0308.0326)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Spacing' datatype='integer' name='[Parámetro 1]' param-domain-type='any' role='measure' type='quantitative' value='2'>
+        <calculation class='tableau' formula='2' />
+      </column>
+      <column caption='Size' datatype='real' name='[Parámetro 2]' param-domain-type='any' role='measure' type='quantitative' value='100.'>
+        <calculation class='tableau' formula='100.' />
+      </column>
+    </datasource>
+    <datasource caption='2020 (covid_espana)' inline='true' name='federated.05un98z00apah81a7bdxw1uxtrxl' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='covid_espana' name='excel-direct.0psl1wj0ib3zv410ptg5x1255xc3'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Lenovo/OneDrive/Escritorio/UOC/Semestre 4/Visualización de datos/PEC2/covid_espana.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='range' name='textscan.1jjec491xm0cq914v0rtq0qjvv05'>
+            <connection class='textscan' directory='C:/Users/Lenovo/OneDrive/Escritorio/UOC/Semestre 4/Visualización de datos/PEC2' filename='range.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='1' />
+              <expression op='1' />
+            </expression>
+          </clause>
+          <relation connection='excel-direct.0psl1wj0ib3zv410ptg5x1255xc3' name='2020' table='[&apos;2020$&apos;]' type='table'>
+            <columns gridOrigin='A1:BI336:no:A1:BI336:0' header='yes' outcome='2'>
+              <column datatype='string' name='iso_code' ordinal='0' />
+              <column datatype='string' name='continent' ordinal='1' />
+              <column datatype='string' name='location' ordinal='2' />
+              <column datatype='date' name='date' ordinal='3' />
+              <column datatype='string' name='total_cases' ordinal='4' />
+              <column datatype='integer' name='new_cases' ordinal='5' />
+              <column datatype='real' name='new_cases_smoothed' ordinal='6' />
+              <column datatype='string' name='total_deaths' ordinal='7' />
+              <column datatype='integer' name='new_deaths' ordinal='8' />
+              <column datatype='real' name='new_deaths_smoothed' ordinal='9' />
+              <column datatype='real' name='new_deaths_smoothed_14' ordinal='10' />
+              <column datatype='string' name='total_cases_per_million' ordinal='11' />
+              <column datatype='string' name='new_cases_per_million' ordinal='12' />
+              <column datatype='string' name='new_cases_smoothed_per_million' ordinal='13' />
+              <column datatype='string' name='total_deaths_per_million' ordinal='14' />
+              <column datatype='string' name='new_deaths_per_million' ordinal='15' />
+              <column datatype='string' name='new_deaths_smoothed_per_million' ordinal='16' />
+              <column datatype='string' name='reproduction_rate' ordinal='17' />
+              <column datatype='string' name='icu_patients' ordinal='18' />
+              <column datatype='string' name='icu_patients_per_million' ordinal='19' />
+              <column datatype='string' name='hosp_patients' ordinal='20' />
+              <column datatype='string' name='hosp_patients_per_million' ordinal='21' />
+              <column datatype='string' name='weekly_icu_admissions' ordinal='22' />
+              <column datatype='string' name='weekly_icu_admissions_per_million' ordinal='23' />
+              <column datatype='string' name='weekly_hosp_admissions' ordinal='24' />
+              <column datatype='string' name='weekly_hosp_admissions_per_million' ordinal='25' />
+              <column datatype='string' name='new_tests' ordinal='26' />
+              <column datatype='string' name='total_tests' ordinal='27' />
+              <column datatype='string' name='total_tests_per_thousand' ordinal='28' />
+              <column datatype='string' name='new_tests_per_thousand' ordinal='29' />
+              <column datatype='string' name='new_tests_smoothed' ordinal='30' />
+              <column datatype='string' name='new_tests_smoothed_per_thousand' ordinal='31' />
+              <column datatype='string' name='positive_rate' ordinal='32' />
+              <column datatype='string' name='tests_per_case' ordinal='33' />
+              <column datatype='string' name='tests_units' ordinal='34' />
+              <column datatype='string' name='total_vaccinations' ordinal='35' />
+              <column datatype='string' name='people_vaccinated' ordinal='36' />
+              <column datatype='string' name='people_fully_vaccinated' ordinal='37' />
+              <column datatype='string' name='new_vaccinations' ordinal='38' />
+              <column datatype='string' name='new_vaccinations_smoothed' ordinal='39' />
+              <column datatype='string' name='total_vaccinations_per_hundred' ordinal='40' />
+              <column datatype='string' name='people_vaccinated_per_hundred' ordinal='41' />
+              <column datatype='string' name='people_fully_vaccinated_per_hundred' ordinal='42' />
+              <column datatype='string' name='new_vaccinations_smoothed_per_million' ordinal='43' />
+              <column datatype='string' name='stringency_index' ordinal='44' />
+              <column datatype='string' name='population' ordinal='45' />
+              <column datatype='integer' name='population_density' ordinal='46' />
+              <column datatype='string' name='median_age' ordinal='47' />
+              <column datatype='integer' name='aged_65_older' ordinal='48' />
+              <column datatype='integer' name='aged_70_older' ordinal='49' />
+              <column datatype='string' name='gdp_per_capita' ordinal='50' />
+              <column datatype='string' name='extreme_poverty' ordinal='51' />
+              <column datatype='integer' name='cardiovasc_death_rate' ordinal='52' />
+              <column datatype='string' name='diabetes_prevalence' ordinal='53' />
+              <column datatype='string' name='female_smokers' ordinal='54' />
+              <column datatype='string' name='male_smokers' ordinal='55' />
+              <column datatype='string' name='handwashing_facilities' ordinal='56' />
+              <column datatype='string' name='hospital_beds_per_thousand' ordinal='57' />
+              <column datatype='string' name='life_expectancy' ordinal='58' />
+              <column datatype='string' name='human_development_index' ordinal='59' />
+              <column datatype='string' name='excess_mortality' ordinal='60' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1jjec491xm0cq914v0rtq0qjvv05' name='range.csv' table='[range#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='es_ES'>
+              <column datatype='integer' name='Range' ordinal='0' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='1' />
+              <expression op='1' />
+            </expression>
+          </clause>
+          <relation connection='excel-direct.0psl1wj0ib3zv410ptg5x1255xc3' name='2020' table='[&apos;2020$&apos;]' type='table'>
+            <columns gridOrigin='A1:BI336:no:A1:BI336:0' header='yes' outcome='2'>
+              <column datatype='string' name='iso_code' ordinal='0' />
+              <column datatype='string' name='continent' ordinal='1' />
+              <column datatype='string' name='location' ordinal='2' />
+              <column datatype='date' name='date' ordinal='3' />
+              <column datatype='string' name='total_cases' ordinal='4' />
+              <column datatype='integer' name='new_cases' ordinal='5' />
+              <column datatype='real' name='new_cases_smoothed' ordinal='6' />
+              <column datatype='string' name='total_deaths' ordinal='7' />
+              <column datatype='integer' name='new_deaths' ordinal='8' />
+              <column datatype='real' name='new_deaths_smoothed' ordinal='9' />
+              <column datatype='real' name='new_deaths_smoothed_14' ordinal='10' />
+              <column datatype='string' name='total_cases_per_million' ordinal='11' />
+              <column datatype='string' name='new_cases_per_million' ordinal='12' />
+              <column datatype='string' name='new_cases_smoothed_per_million' ordinal='13' />
+              <column datatype='string' name='total_deaths_per_million' ordinal='14' />
+              <column datatype='string' name='new_deaths_per_million' ordinal='15' />
+              <column datatype='string' name='new_deaths_smoothed_per_million' ordinal='16' />
+              <column datatype='string' name='reproduction_rate' ordinal='17' />
+              <column datatype='string' name='icu_patients' ordinal='18' />
+              <column datatype='string' name='icu_patients_per_million' ordinal='19' />
+              <column datatype='string' name='hosp_patients' ordinal='20' />
+              <column datatype='string' name='hosp_patients_per_million' ordinal='21' />
+              <column datatype='string' name='weekly_icu_admissions' ordinal='22' />
+              <column datatype='string' name='weekly_icu_admissions_per_million' ordinal='23' />
+              <column datatype='string' name='weekly_hosp_admissions' ordinal='24' />
+              <column datatype='string' name='weekly_hosp_admissions_per_million' ordinal='25' />
+              <column datatype='string' name='new_tests' ordinal='26' />
+              <column datatype='string' name='total_tests' ordinal='27' />
+              <column datatype='string' name='total_tests_per_thousand' ordinal='28' />
+              <column datatype='string' name='new_tests_per_thousand' ordinal='29' />
+              <column datatype='string' name='new_tests_smoothed' ordinal='30' />
+              <column datatype='string' name='new_tests_smoothed_per_thousand' ordinal='31' />
+              <column datatype='string' name='positive_rate' ordinal='32' />
+              <column datatype='string' name='tests_per_case' ordinal='33' />
+              <column datatype='string' name='tests_units' ordinal='34' />
+              <column datatype='string' name='total_vaccinations' ordinal='35' />
+              <column datatype='string' name='people_vaccinated' ordinal='36' />
+              <column datatype='string' name='people_fully_vaccinated' ordinal='37' />
+              <column datatype='string' name='new_vaccinations' ordinal='38' />
+              <column datatype='string' name='new_vaccinations_smoothed' ordinal='39' />
+              <column datatype='string' name='total_vaccinations_per_hundred' ordinal='40' />
+              <column datatype='string' name='people_vaccinated_per_hundred' ordinal='41' />
+              <column datatype='string' name='people_fully_vaccinated_per_hundred' ordinal='42' />
+              <column datatype='string' name='new_vaccinations_smoothed_per_million' ordinal='43' />
+              <column datatype='string' name='stringency_index' ordinal='44' />
+              <column datatype='string' name='population' ordinal='45' />
+              <column datatype='integer' name='population_density' ordinal='46' />
+              <column datatype='string' name='median_age' ordinal='47' />
+              <column datatype='integer' name='aged_65_older' ordinal='48' />
+              <column datatype='integer' name='aged_70_older' ordinal='49' />
+              <column datatype='string' name='gdp_per_capita' ordinal='50' />
+              <column datatype='string' name='extreme_poverty' ordinal='51' />
+              <column datatype='integer' name='cardiovasc_death_rate' ordinal='52' />
+              <column datatype='string' name='diabetes_prevalence' ordinal='53' />
+              <column datatype='string' name='female_smokers' ordinal='54' />
+              <column datatype='string' name='male_smokers' ordinal='55' />
+              <column datatype='string' name='handwashing_facilities' ordinal='56' />
+              <column datatype='string' name='hospital_beds_per_thousand' ordinal='57' />
+              <column datatype='string' name='life_expectancy' ordinal='58' />
+              <column datatype='string' name='human_development_index' ordinal='59' />
+              <column datatype='string' name='excess_mortality' ordinal='60' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1jjec491xm0cq914v0rtq0qjvv05' name='range.csv' table='[range#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='es_ES'>
+              <column datatype='integer' name='Range' ordinal='0' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[2020]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:BI336:no:A1:BI336:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[range.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_ES&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>iso_code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[iso_code]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>iso_code</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>continent</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[continent]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>continent</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[location]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>location</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_cases</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[total_cases]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>total_cases</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_cases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[new_cases]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_cases</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_cases_smoothed</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[new_cases_smoothed]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_cases_smoothed</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_deaths</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[total_deaths]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>total_deaths</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[new_deaths]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_deaths</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_deaths_smoothed</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[new_deaths_smoothed]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_deaths_smoothed</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_deaths_smoothed_14</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[new_deaths_smoothed_14]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_deaths_smoothed_14</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_cases_per_million</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[total_cases_per_million]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>total_cases_per_million</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_cases_per_million</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[new_cases_per_million]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_cases_per_million</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_cases_smoothed_per_million</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[new_cases_smoothed_per_million]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_cases_smoothed_per_million</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_deaths_per_million</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[total_deaths_per_million]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>total_deaths_per_million</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_deaths_per_million</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[new_deaths_per_million]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_deaths_per_million</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_deaths_smoothed_per_million</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[new_deaths_smoothed_per_million]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_deaths_smoothed_per_million</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reproduction_rate</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[reproduction_rate]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>reproduction_rate</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>icu_patients</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[icu_patients]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>icu_patients</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>icu_patients_per_million</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[icu_patients_per_million]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>icu_patients_per_million</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hosp_patients</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[hosp_patients]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>hosp_patients</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hosp_patients_per_million</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[hosp_patients_per_million]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>hosp_patients_per_million</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weekly_icu_admissions</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[weekly_icu_admissions]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>weekly_icu_admissions</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weekly_icu_admissions_per_million</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[weekly_icu_admissions_per_million]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>weekly_icu_admissions_per_million</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weekly_hosp_admissions</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[weekly_hosp_admissions]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>weekly_hosp_admissions</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weekly_hosp_admissions_per_million</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[weekly_hosp_admissions_per_million]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>weekly_hosp_admissions_per_million</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_tests</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[new_tests]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_tests</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_tests</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[total_tests]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>total_tests</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_tests_per_thousand</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[total_tests_per_thousand]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>total_tests_per_thousand</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_tests_per_thousand</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[new_tests_per_thousand]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_tests_per_thousand</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_tests_smoothed</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[new_tests_smoothed]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_tests_smoothed</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_tests_smoothed_per_thousand</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[new_tests_smoothed_per_thousand]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_tests_smoothed_per_thousand</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>positive_rate</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[positive_rate]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>positive_rate</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tests_per_case</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[tests_per_case]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>tests_per_case</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tests_units</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[tests_units]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>tests_units</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_vaccinations</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[total_vaccinations]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>total_vaccinations</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people_vaccinated</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[people_vaccinated]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>people_vaccinated</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people_fully_vaccinated</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[people_fully_vaccinated]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>people_fully_vaccinated</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_vaccinations</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[new_vaccinations]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_vaccinations</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_vaccinations_smoothed</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[new_vaccinations_smoothed]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_vaccinations_smoothed</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_vaccinations_per_hundred</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[total_vaccinations_per_hundred]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>total_vaccinations_per_hundred</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people_vaccinated_per_hundred</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[people_vaccinated_per_hundred]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>people_vaccinated_per_hundred</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people_fully_vaccinated_per_hundred</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[people_fully_vaccinated_per_hundred]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>people_fully_vaccinated_per_hundred</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_vaccinations_smoothed_per_million</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[new_vaccinations_smoothed_per_million]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>new_vaccinations_smoothed_per_million</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stringency_index</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[stringency_index]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>stringency_index</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>population</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[population]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>population</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>population_density</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[population_density]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>population_density</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>median_age</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[median_age]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>median_age</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>aged_65_older</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[aged_65_older]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>aged_65_older</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>aged_70_older</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[aged_70_older]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>aged_70_older</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gdp_per_capita</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[gdp_per_capita]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>gdp_per_capita</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>extreme_poverty</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[extreme_poverty]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>extreme_poverty</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cardiovasc_death_rate</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cardiovasc_death_rate]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>cardiovasc_death_rate</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>diabetes_prevalence</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[diabetes_prevalence]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>diabetes_prevalence</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>female_smokers</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[female_smokers]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>female_smokers</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>male_smokers</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[male_smokers]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>male_smokers</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>handwashing_facilities</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[handwashing_facilities]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>handwashing_facilities</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hospital_beds_per_thousand</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[hospital_beds_per_thousand]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>hospital_beds_per_thousand</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>life_expectancy</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[life_expectancy]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>life_expectancy</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>human_development_index</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[human_development_index]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>human_development_index</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>excess_mortality</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[excess_mortality]</local-name>
+            <parent-name>[2020]</parent-name>
+            <remote-alias>excess_mortality</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Range</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Range]</local-name>
+            <parent-name>[range.csv]</parent-name>
+            <remote-alias>Range</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_77A0B45D41224E3D8572EF8C238FBF16]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='@Tot Cases' datatype='real' name='[@Deaths (copia)_82753652131770379]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='WINDOW_SUM(SUM([new_cases]))/2'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='@index' datatype='integer' name='[Calculation_82753652129013764]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(INDEX() -1) * [Parameters].[Parámetro 1]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='@Range Cal' datatype='integer' name='[Calculation_82753652129234950]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='WINDOW_MAX(MAX([Range]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Starting point' datatype='real' name='[Calculation_82753652129415175]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1 + ([Calculation_82753652129013764]/100)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='X' datatype='real' name='[Calculation_82753652129865736]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if MAX([Range]) = 0 then&#13;&#10;SIN(RADIANS([Calculation_82753652129013764])) * [Calculation_82753652129415175]&#13;&#10;&#13;&#10;ELSE&#13;&#10;SIN(RADIANS([Calculation_82753652129013764])) * ([Calculation_82753652129415175] + ([Calculation_82753652131893260]*[Parameters].[Parámetro 2]))&#13;&#10;&#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='@Cases' datatype='real' name='[Calculation_82753652131385354]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='WINDOW_SUM(SUM([new_cases]))/2'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='@Percentaje' datatype='real' name='[Calculation_82753652131893260]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([Calculation_82753652131385354]/[@Deaths (copia)_82753652131770379])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Y' datatype='real' name='[X (copia)_82753652130525193]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if MAX([Range]) = 0 then&#13;&#10;COS(RADIANS([Calculation_82753652129013764])) * [Calculation_82753652129415175]&#13;&#10;&#13;&#10;else&#13;&#10;COS(RADIANS([Calculation_82753652129013764])) * ([Calculation_82753652129415175]+([Calculation_82753652131893260]*[Parameters].[Parámetro 2]))&#13;&#10;&#13;&#10;end'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='2020' datatype='table' name='[__tableau_internal_object_id__].[2020_77A0B45D41224E3D8572EF8C238FBF16]' role='measure' type='quantitative' />
+      <column caption='Aged 65 Older' datatype='integer' name='[aged_65_older]' role='measure' type='quantitative' />
+      <column caption='Aged 70 Older' datatype='integer' name='[aged_70_older]' role='measure' type='quantitative' />
+      <column caption='Cardiovasc Death Rate' datatype='integer' name='[cardiovasc_death_rate]' role='measure' type='quantitative' />
+      <column caption='Continent' datatype='string' name='[continent]' role='dimension' type='nominal' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Diabetes Prevalence' datatype='string' name='[diabetes_prevalence]' role='dimension' type='nominal' />
+      <column caption='Excess Mortality' datatype='string' name='[excess_mortality]' role='dimension' type='nominal' />
+      <column caption='Extreme Poverty' datatype='string' name='[extreme_poverty]' role='dimension' type='nominal' />
+      <column caption='Female Smokers' datatype='string' name='[female_smokers]' role='dimension' type='nominal' />
+      <column caption='Gdp Per Capita' datatype='string' name='[gdp_per_capita]' role='dimension' type='nominal' />
+      <column caption='Handwashing Facilities' datatype='string' name='[handwashing_facilities]' role='dimension' type='nominal' />
+      <column caption='Hosp Patients' datatype='string' name='[hosp_patients]' role='dimension' type='nominal' />
+      <column caption='Hosp Patients Per Million' datatype='string' name='[hosp_patients_per_million]' role='dimension' type='nominal' />
+      <column caption='Hospital Beds Per Thousand' datatype='string' name='[hospital_beds_per_thousand]' role='dimension' type='nominal' />
+      <column caption='Human Development Index' datatype='string' name='[human_development_index]' role='dimension' type='nominal' />
+      <column caption='Icu Patients' datatype='string' name='[icu_patients]' role='dimension' type='nominal' />
+      <column caption='Icu Patients Per Million' datatype='string' name='[icu_patients_per_million]' role='dimension' type='nominal' />
+      <column caption='Iso Code' datatype='string' name='[iso_code]' role='dimension' type='nominal' />
+      <column caption='Life Expectancy' datatype='string' name='[life_expectancy]' role='dimension' type='nominal' />
+      <column caption='Location' datatype='string' name='[location]' role='dimension' type='nominal' />
+      <column caption='Male Smokers' datatype='string' name='[male_smokers]' role='dimension' type='nominal' />
+      <column caption='Median Age' datatype='string' name='[median_age]' role='dimension' type='nominal' />
+      <column caption='New Cases' datatype='integer' name='[new_cases]' role='measure' type='quantitative' />
+      <column caption='New Cases Per Million' datatype='string' name='[new_cases_per_million]' role='dimension' type='nominal' />
+      <column caption='New Cases Smoothed' datatype='real' name='[new_cases_smoothed]' role='measure' type='quantitative' />
+      <column caption='New Cases Smoothed Per Million' datatype='string' name='[new_cases_smoothed_per_million]' role='dimension' type='nominal' />
+      <column caption='New Deaths' datatype='integer' name='[new_deaths]' role='measure' type='quantitative' />
+      <column caption='New Deaths Per Million' datatype='string' name='[new_deaths_per_million]' role='dimension' type='nominal' />
+      <column caption='New Deaths Smoothed' datatype='real' name='[new_deaths_smoothed]' role='measure' type='quantitative' />
+      <column caption='New Deaths Smoothed 14' datatype='real' name='[new_deaths_smoothed_14]' role='measure' type='quantitative' />
+      <column caption='New Deaths Smoothed Per Million' datatype='string' name='[new_deaths_smoothed_per_million]' role='dimension' type='nominal' />
+      <column caption='New Tests' datatype='string' name='[new_tests]' role='dimension' type='nominal' />
+      <column caption='New Tests Per Thousand' datatype='string' name='[new_tests_per_thousand]' role='dimension' type='nominal' />
+      <column caption='New Tests Smoothed' datatype='string' name='[new_tests_smoothed]' role='dimension' type='nominal' />
+      <column caption='New Tests Smoothed Per Thousand' datatype='string' name='[new_tests_smoothed_per_thousand]' role='dimension' type='nominal' />
+      <column caption='New Vaccinations' datatype='string' name='[new_vaccinations]' role='dimension' type='nominal' />
+      <column caption='New Vaccinations Smoothed' datatype='string' name='[new_vaccinations_smoothed]' role='dimension' type='nominal' />
+      <column caption='New Vaccinations Smoothed Per Million' datatype='string' name='[new_vaccinations_smoothed_per_million]' role='dimension' type='nominal' />
+      <column caption='People Fully Vaccinated' datatype='string' name='[people_fully_vaccinated]' role='dimension' type='nominal' />
+      <column caption='People Fully Vaccinated Per Hundred' datatype='string' name='[people_fully_vaccinated_per_hundred]' role='dimension' type='nominal' />
+      <column caption='People Vaccinated' datatype='string' name='[people_vaccinated]' role='dimension' type='nominal' />
+      <column caption='People Vaccinated Per Hundred' datatype='string' name='[people_vaccinated_per_hundred]' role='dimension' type='nominal' />
+      <column caption='Population' datatype='string' name='[population]' role='dimension' type='nominal' />
+      <column caption='Population Density' datatype='integer' name='[population_density]' role='measure' type='quantitative' />
+      <column caption='Positive Rate' datatype='string' name='[positive_rate]' role='dimension' type='nominal' />
+      <column caption='Reproduction Rate' datatype='string' name='[reproduction_rate]' role='dimension' type='nominal' />
+      <column caption='Stringency Index' datatype='string' name='[stringency_index]' role='dimension' type='nominal' />
+      <column caption='Tests Per Case' datatype='string' name='[tests_per_case]' role='dimension' type='nominal' />
+      <column caption='Tests Units' datatype='string' name='[tests_units]' role='dimension' type='nominal' />
+      <column caption='Total Cases' datatype='string' name='[total_cases]' role='dimension' type='nominal' />
+      <column caption='Total Cases Per Million' datatype='string' name='[total_cases_per_million]' role='dimension' type='nominal' />
+      <column caption='Total Deaths' datatype='string' name='[total_deaths]' role='dimension' type='nominal' />
+      <column caption='Total Deaths Per Million' datatype='string' name='[total_deaths_per_million]' role='dimension' type='nominal' />
+      <column caption='Total Tests' datatype='string' name='[total_tests]' role='dimension' type='nominal' />
+      <column caption='Total Tests Per Thousand' datatype='string' name='[total_tests_per_thousand]' role='dimension' type='nominal' />
+      <column caption='Total Vaccinations' datatype='string' name='[total_vaccinations]' role='dimension' type='nominal' />
+      <column caption='Total Vaccinations Per Hundred' datatype='string' name='[total_vaccinations_per_hundred]' role='dimension' type='nominal' />
+      <column caption='Weekly Hosp Admissions' datatype='string' name='[weekly_hosp_admissions]' role='dimension' type='nominal' />
+      <column caption='Weekly Hosp Admissions Per Million' datatype='string' name='[weekly_hosp_admissions_per_million]' role='dimension' type='nominal' />
+      <column caption='Weekly Icu Admissions' datatype='string' name='[weekly_icu_admissions]' role='dimension' type='nominal' />
+      <column caption='Weekly Icu Admissions Per Million' datatype='string' name='[weekly_icu_admissions_per_million]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;España&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='iso_code' />
+        <field-sort-custom-order field='Calculation_82753652126679040' />
+        <field-sort-custom-order field='continent' />
+        <field-sort-custom-order field='location' />
+        <field-sort-custom-order field='date' />
+        <field-sort-custom-order field='total_cases' />
+        <field-sort-custom-order field='new_cases' />
+        <field-sort-custom-order field='new_cases_smoothed' />
+        <field-sort-custom-order field='total_deaths' />
+        <field-sort-custom-order field='new_deaths' />
+        <field-sort-custom-order field='new_deaths_smoothed' />
+        <field-sort-custom-order field='new_deaths_smoothed_14' />
+        <field-sort-custom-order field='total_cases_per_million' />
+        <field-sort-custom-order field='new_cases_per_million' />
+        <field-sort-custom-order field='new_cases_smoothed_per_million' />
+        <field-sort-custom-order field='total_deaths_per_million' />
+        <field-sort-custom-order field='new_deaths_per_million' />
+        <field-sort-custom-order field='new_deaths_smoothed_per_million' />
+        <field-sort-custom-order field='reproduction_rate' />
+        <field-sort-custom-order field='icu_patients' />
+        <field-sort-custom-order field='icu_patients_per_million' />
+        <field-sort-custom-order field='hosp_patients' />
+        <field-sort-custom-order field='hosp_patients_per_million' />
+        <field-sort-custom-order field='weekly_icu_admissions' />
+        <field-sort-custom-order field='weekly_icu_admissions_per_million' />
+        <field-sort-custom-order field='weekly_hosp_admissions' />
+        <field-sort-custom-order field='weekly_hosp_admissions_per_million' />
+        <field-sort-custom-order field='new_tests' />
+        <field-sort-custom-order field='total_tests' />
+        <field-sort-custom-order field='total_tests_per_thousand' />
+        <field-sort-custom-order field='new_tests_per_thousand' />
+        <field-sort-custom-order field='new_tests_smoothed' />
+        <field-sort-custom-order field='new_tests_smoothed_per_thousand' />
+        <field-sort-custom-order field='positive_rate' />
+        <field-sort-custom-order field='tests_per_case' />
+        <field-sort-custom-order field='tests_units' />
+        <field-sort-custom-order field='total_vaccinations' />
+        <field-sort-custom-order field='people_vaccinated' />
+        <field-sort-custom-order field='people_fully_vaccinated' />
+        <field-sort-custom-order field='new_vaccinations' />
+        <field-sort-custom-order field='new_vaccinations_smoothed' />
+        <field-sort-custom-order field='total_vaccinations_per_hundred' />
+        <field-sort-custom-order field='people_vaccinated_per_hundred' />
+        <field-sort-custom-order field='people_fully_vaccinated_per_hundred' />
+        <field-sort-custom-order field='new_vaccinations_smoothed_per_million' />
+        <field-sort-custom-order field='stringency_index' />
+        <field-sort-custom-order field='population' />
+        <field-sort-custom-order field='population_density' />
+        <field-sort-custom-order field='median_age' />
+        <field-sort-custom-order field='aged_65_older' />
+        <field-sort-custom-order field='aged_70_older' />
+        <field-sort-custom-order field='gdp_per_capita' />
+        <field-sort-custom-order field='extreme_poverty' />
+        <field-sort-custom-order field='cardiovasc_death_rate' />
+        <field-sort-custom-order field='diabetes_prevalence' />
+        <field-sort-custom-order field='female_smokers' />
+        <field-sort-custom-order field='male_smokers' />
+        <field-sort-custom-order field='handwashing_facilities' />
+        <field-sort-custom-order field='hospital_beds_per_thousand' />
+        <field-sort-custom-order field='life_expectancy' />
+        <field-sort-custom-order field='human_development_index' />
+        <field-sort-custom-order field='excess_mortality' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Spacing' datatype='integer' name='[Parámetro 1]' param-domain-type='any' role='measure' type='quantitative' value='2'>
+          <calculation class='tableau' formula='2' />
+        </column>
+        <column caption='Size' datatype='real' name='[Parámetro 2]' param-domain-type='any' role='measure' type='quantitative' value='100.'>
+          <calculation class='tableau' formula='100.' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='2020' id='2020_77A0B45D41224E3D8572EF8C238FBF16'>
+            <properties context=''>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='1' />
+                    <expression op='1' />
+                  </expression>
+                </clause>
+                <relation connection='excel-direct.0psl1wj0ib3zv410ptg5x1255xc3' name='2020' table='[&apos;2020$&apos;]' type='table'>
+                  <columns gridOrigin='A1:BI336:no:A1:BI336:0' header='yes' outcome='2'>
+                    <column datatype='string' name='iso_code' ordinal='0' />
+                    <column datatype='string' name='continent' ordinal='1' />
+                    <column datatype='string' name='location' ordinal='2' />
+                    <column datatype='date' name='date' ordinal='3' />
+                    <column datatype='string' name='total_cases' ordinal='4' />
+                    <column datatype='integer' name='new_cases' ordinal='5' />
+                    <column datatype='real' name='new_cases_smoothed' ordinal='6' />
+                    <column datatype='string' name='total_deaths' ordinal='7' />
+                    <column datatype='integer' name='new_deaths' ordinal='8' />
+                    <column datatype='real' name='new_deaths_smoothed' ordinal='9' />
+                    <column datatype='real' name='new_deaths_smoothed_14' ordinal='10' />
+                    <column datatype='string' name='total_cases_per_million' ordinal='11' />
+                    <column datatype='string' name='new_cases_per_million' ordinal='12' />
+                    <column datatype='string' name='new_cases_smoothed_per_million' ordinal='13' />
+                    <column datatype='string' name='total_deaths_per_million' ordinal='14' />
+                    <column datatype='string' name='new_deaths_per_million' ordinal='15' />
+                    <column datatype='string' name='new_deaths_smoothed_per_million' ordinal='16' />
+                    <column datatype='string' name='reproduction_rate' ordinal='17' />
+                    <column datatype='string' name='icu_patients' ordinal='18' />
+                    <column datatype='string' name='icu_patients_per_million' ordinal='19' />
+                    <column datatype='string' name='hosp_patients' ordinal='20' />
+                    <column datatype='string' name='hosp_patients_per_million' ordinal='21' />
+                    <column datatype='string' name='weekly_icu_admissions' ordinal='22' />
+                    <column datatype='string' name='weekly_icu_admissions_per_million' ordinal='23' />
+                    <column datatype='string' name='weekly_hosp_admissions' ordinal='24' />
+                    <column datatype='string' name='weekly_hosp_admissions_per_million' ordinal='25' />
+                    <column datatype='string' name='new_tests' ordinal='26' />
+                    <column datatype='string' name='total_tests' ordinal='27' />
+                    <column datatype='string' name='total_tests_per_thousand' ordinal='28' />
+                    <column datatype='string' name='new_tests_per_thousand' ordinal='29' />
+                    <column datatype='string' name='new_tests_smoothed' ordinal='30' />
+                    <column datatype='string' name='new_tests_smoothed_per_thousand' ordinal='31' />
+                    <column datatype='string' name='positive_rate' ordinal='32' />
+                    <column datatype='string' name='tests_per_case' ordinal='33' />
+                    <column datatype='string' name='tests_units' ordinal='34' />
+                    <column datatype='string' name='total_vaccinations' ordinal='35' />
+                    <column datatype='string' name='people_vaccinated' ordinal='36' />
+                    <column datatype='string' name='people_fully_vaccinated' ordinal='37' />
+                    <column datatype='string' name='new_vaccinations' ordinal='38' />
+                    <column datatype='string' name='new_vaccinations_smoothed' ordinal='39' />
+                    <column datatype='string' name='total_vaccinations_per_hundred' ordinal='40' />
+                    <column datatype='string' name='people_vaccinated_per_hundred' ordinal='41' />
+                    <column datatype='string' name='people_fully_vaccinated_per_hundred' ordinal='42' />
+                    <column datatype='string' name='new_vaccinations_smoothed_per_million' ordinal='43' />
+                    <column datatype='string' name='stringency_index' ordinal='44' />
+                    <column datatype='string' name='population' ordinal='45' />
+                    <column datatype='integer' name='population_density' ordinal='46' />
+                    <column datatype='string' name='median_age' ordinal='47' />
+                    <column datatype='integer' name='aged_65_older' ordinal='48' />
+                    <column datatype='integer' name='aged_70_older' ordinal='49' />
+                    <column datatype='string' name='gdp_per_capita' ordinal='50' />
+                    <column datatype='string' name='extreme_poverty' ordinal='51' />
+                    <column datatype='integer' name='cardiovasc_death_rate' ordinal='52' />
+                    <column datatype='string' name='diabetes_prevalence' ordinal='53' />
+                    <column datatype='string' name='female_smokers' ordinal='54' />
+                    <column datatype='string' name='male_smokers' ordinal='55' />
+                    <column datatype='string' name='handwashing_facilities' ordinal='56' />
+                    <column datatype='string' name='hospital_beds_per_thousand' ordinal='57' />
+                    <column datatype='string' name='life_expectancy' ordinal='58' />
+                    <column datatype='string' name='human_development_index' ordinal='59' />
+                    <column datatype='string' name='excess_mortality' ordinal='60' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1jjec491xm0cq914v0rtq0qjvv05' name='range.csv' table='[range#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='es_ES'>
+                    <column datatype='integer' name='Range' ordinal='0' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Spiral'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2020 (covid_espana)' name='federated.05un98z00apah81a7bdxw1uxtrxl' />
+            <datasource caption='Parámetros' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Spacing' datatype='integer' name='[Parámetro 1]' param-domain-type='any' role='measure' type='quantitative' value='2'>
+              <calculation class='tableau' formula='2' />
+            </column>
+            <column caption='Size' datatype='real' name='[Parámetro 2]' param-domain-type='any' role='measure' type='quantitative' value='100.'>
+              <calculation class='tableau' formula='100.' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.05un98z00apah81a7bdxw1uxtrxl'>
+            <column caption='@Tot Cases' datatype='real' name='[@Deaths (copia)_82753652131770379]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='WINDOW_SUM(SUM([new_cases]))/2'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='@index' datatype='integer' name='[Calculation_82753652129013764]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(INDEX() -1) * [Parameters].[Parámetro 1]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Starting point' datatype='real' name='[Calculation_82753652129415175]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1 + ([Calculation_82753652129013764]/100)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='X' datatype='real' name='[Calculation_82753652129865736]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='if MAX([Range]) = 0 then&#13;&#10;SIN(RADIANS([Calculation_82753652129013764])) * [Calculation_82753652129415175]&#13;&#10;&#13;&#10;ELSE&#13;&#10;SIN(RADIANS([Calculation_82753652129013764])) * ([Calculation_82753652129415175] + ([Calculation_82753652131893260]*[Parameters].[Parámetro 2]))&#13;&#10;&#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='@Cases' datatype='real' name='[Calculation_82753652131385354]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='WINDOW_SUM(SUM([new_cases]))/2'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='@Percentaje' datatype='real' name='[Calculation_82753652131893260]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([Calculation_82753652131385354]/[@Deaths (copia)_82753652131770379])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Range]' role='measure' type='quantitative' />
+            <column caption='Y' datatype='real' name='[X (copia)_82753652130525193]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='if MAX([Range]) = 0 then&#13;&#10;COS(RADIANS([Calculation_82753652129013764])) * [Calculation_82753652129415175]&#13;&#10;&#13;&#10;else&#13;&#10;COS(RADIANS([Calculation_82753652129013764])) * ([Calculation_82753652129415175]+([Calculation_82753652131893260]*[Parameters].[Parámetro 2]))&#13;&#10;&#13;&#10;end'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='New Cases' datatype='integer' name='[new_cases]' role='measure' type='quantitative' />
+            <column-instance column='[Range]' derivation='None' name='[none:Range:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_82753652129865736]' derivation='User' name='[usr:Calculation_82753652129865736:qk:9]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.05un98z00apah81a7bdxw1uxtrxl].[date]' ordering-type='Field' />
+              <table-calc field='[federated.05un98z00apah81a7bdxw1uxtrxl].[Calculation_82753652129013764]' ordering-field='[federated.05un98z00apah81a7bdxw1uxtrxl].[date]' ordering-type='Field' />
+              <table-calc field='[federated.05un98z00apah81a7bdxw1uxtrxl].[Calculation_82753652129415175]' ordering-field='[federated.05un98z00apah81a7bdxw1uxtrxl].[date]' ordering-type='Field' />
+              <table-calc field='[federated.05un98z00apah81a7bdxw1uxtrxl].[Calculation_82753652131893260]' ordering-field='[federated.05un98z00apah81a7bdxw1uxtrxl].[date]' ordering-type='Field' />
+              <table-calc field='[federated.05un98z00apah81a7bdxw1uxtrxl].[@Deaths (copia)_82753652131770379]' ordering-field='[federated.05un98z00apah81a7bdxw1uxtrxl].[date]' ordering-type='Field' />
+              <table-calc field='[federated.05un98z00apah81a7bdxw1uxtrxl].[Calculation_82753652131385354]' ordering-field='' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Calculation_82753652131385354]' derivation='User' name='[usr:Calculation_82753652131385354:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[X (copia)_82753652130525193]' derivation='User' name='[usr:X (copia)_82753652130525193:qk:6]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.05un98z00apah81a7bdxw1uxtrxl].[date]' ordering-type='Field' />
+              <table-calc field='[federated.05un98z00apah81a7bdxw1uxtrxl].[Calculation_82753652129013764]' ordering-field='[federated.05un98z00apah81a7bdxw1uxtrxl].[date]' ordering-type='Field' />
+              <table-calc field='[federated.05un98z00apah81a7bdxw1uxtrxl].[Calculation_82753652129415175]' ordering-field='[federated.05un98z00apah81a7bdxw1uxtrxl].[date]' ordering-type='Field' />
+              <table-calc field='[federated.05un98z00apah81a7bdxw1uxtrxl].[Calculation_82753652131893260]' ordering-field='[federated.05un98z00apah81a7bdxw1uxtrxl].[date]' ordering-type='Field' />
+              <table-calc field='[federated.05un98z00apah81a7bdxw1uxtrxl].[@Deaths (copia)_82753652131770379]' ordering-field='[federated.05un98z00apah81a7bdxw1uxtrxl].[date]' ordering-type='Field' />
+              <table-calc field='[federated.05un98z00apah81a7bdxw1uxtrxl].[Calculation_82753652131385354]' ordering-field='[federated.05un98z00apah81a7bdxw1uxtrxl].[date]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.05un98z00apah81a7bdxw1uxtrxl].[usr:Calculation_82753652131385354:qk]' palette='sunrise_sunset_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.05un98z00apah81a7bdxw1uxtrxl].[usr:Calculation_82753652131385354:qk]' />
+              <lod column='[federated.05un98z00apah81a7bdxw1uxtrxl].[none:date:qk]' />
+              <path column='[federated.05un98z00apah81a7bdxw1uxtrxl].[none:Range:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.05un98z00apah81a7bdxw1uxtrxl].[usr:X (copia)_82753652130525193:qk:6]</rows>
+        <cols>[federated.05un98z00apah81a7bdxw1uxtrxl].[usr:Calculation_82753652129865736:qk:9]</cols>
+        <show-full-range>
+          <column>[federated.05un98z00apah81a7bdxw1uxtrxl].[date]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{9FAA80B4-FA4D-47BE-92FF-633404C972EA}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Spiral'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card mode='type_in' param='[Parameters].[Parámetro 1]' type='parameter' />
+            <card mode='type_in' param='[Parameters].[Parámetro 2]' type='parameter' />
+            <card pane-specification-id='2' param='[federated.05un98z00apah81a7bdxw1uxtrxl].[usr:Calculation_82753652131385354:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.05un98z00apah81a7bdxw1uxtrxl].[none:date:qk]</field>
+            <field>[federated.05un98z00apah81a7bdxw1uxtrxl].[usr:Calculation_82753652131385354:qk:2]</field>
+            <field>[federated.05un98z00apah81a7bdxw1uxtrxl].[usr:Calculation_82753652131385354:qk]</field>
+            <field>[federated.05un98z00apah81a7bdxw1uxtrxl].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{CF16A25E-AC4C-4BBD-8354-C208052BB07A}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Spiral' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
